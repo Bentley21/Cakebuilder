@@ -6,8 +6,24 @@ Injectable({
 })
 export class LayerService {
 
-    constructor() { }
-    getLayer() : layer[]
-        return this.layer;
+    layer: LayerService[] = []
 
+
+    constructor() { }
+
+    private layers: layer [] = [];
+    private nextId = 1;
+    
+    getLayer(): layer[] {
+        return this.layers;
+    }
+
+    addLayer(layer: Omit<layer, 'id'>): void {
+        this.layers.push({ ...layer, id: this.nextId++ });
+      }
+    
+      deleteLayer(id: number): void {
+        this.layers = this.layers.filter(layer => layer.id !== id);
+    
+   }
 }
