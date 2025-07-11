@@ -1,0 +1,8 @@
+<div>
+    <ol>
+        <li *ngFor="let layer of layerService.getLayers()">
+            {{layer.height}} - {{layer.width}} - {{layer.color}}
+        </li>
+    </ol>
+</div>
+
