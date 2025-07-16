@@ -1,0 +1,7 @@
+<button (click)="toggleForm()">Add A Layer</button>
+
+<app-layer-form
+  *ngIf="showForm"
+  (save)="handleSave($event)"
+  (cancel)="toggleForm()">
+</app-layer-form>

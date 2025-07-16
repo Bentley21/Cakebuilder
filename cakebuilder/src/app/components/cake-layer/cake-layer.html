@@ -1,8 +1,12 @@
-<div>
-    <ol>
-        <li *ngFor="let layer of layerService.getLayers()">
-            {{layer.height}} - {{layer.width}} - {{layer.color}}
-        </li>
-    </ol>
-</div>
-
+<div class="cake">
+    <div
+      *ngFor="let layer of layerService.getLayers()"
+      class="cake-layer"
+      [ngStyle]="{
+        'background-color': layer.color,
+        'width.%': layer.width * 10,
+        'height.em': layer.height
+      }">
+    </div>
+  </div>
+  

@@ -1,0 +1,13 @@
+.cake {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .cake-layer {
+    border-radius: 10px;
+    margin: 5px 0;
+  }
+  
+  

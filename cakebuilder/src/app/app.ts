@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { CakeBuilder } from "./components/cake-builder/cake-builder";
+import { FormsModule } from '@angular/forms';
+import { CakeLayerComponent } from './components/cake-layer/cake-layer';
+import { LayerAddComponent } from './components/layer-add/layer-add';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CakeBuilder , RouterModule],
+  imports: [CakeBuilder , RouterModule , FormsModule, CakeLayerComponent, LayerAddComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

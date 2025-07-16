@@ -1,0 +1,22 @@
+<div>
+  <label>Color:
+    <input type="color" [(ngModel)]="color">
+  </label>
+</div>
+
+<div>
+  <label>Width:
+    <input type="range" min="1" max="10" [(ngModel)]="width">
+  </label>
+</div>
+
+<div>
+  <label>Height:
+    <input type="range" min="1" max="10" [(ngModel)]="height">
+  </label>
+</div>
+
+<div>
+  <button (click)="submitForm()">Save</button>
+  <button (click)="cancelForm()">Cancel</button>
+</div>
